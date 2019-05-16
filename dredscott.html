@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<link rel="stylesheet" href="stylesheet/stlyesheet.css">
+<meta charset="utf-8">
+<title>Dred Scott</title>
+	<script src="dredscott.js"></script>
+	<script src="http://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</head>
+
+<body>
+		<div class = "center">
+	<h1> Before Case</h1>
+
+	<p>Dred Scott was born a slave. He was born around 1790 -1795 in Southampton. Both of his parents were slaves. As a child, he never learned to read or write. Dred Scott’s first owners were the Blow family.In about 1800, Peter Blow took Dred Scott to Alabama and then to Missouri. Soon after, Peter Blow died. Dred Scott was given to an army surgeon named John Emerson around 1830. Dr. Emerson was stationed in Illinois and Wisconsin, both free places. At one of the army bases, Fort Snelling, Dred Scott met Harriet Robinson. She was 19 years old. They were married and Harriet was put under charge of  John Emerson. Dred Scott had two children. The older one was named Eliza Scott. She was born on the steamer Gipsey in a free state while they were on their way back to Missouri. Dred Scott’s other daughter was younger and named Lizzie Scott. Once they were back in Missouri, they stayed there until 1846 when John Emerson died. Dred Scott and his family were given to Irene Emerson, John Emerson’s widow. At this point Dred Scott decided to sue for his freedom.
+	</p>
+
+<script>
+function addWords(){
+	var firstWord = document.getElementById("word1").value;
+	var secondWord = document.getElementById("word2").value;
+	var thirdWord = document.getElementById("word3").value;
+	
+	var firstPlace = document.getElementById("place1")
+	var secondPlace = document.getElementById("place2")
+	var thirdPlace = document.getElementById("place3")
+	
+	firstPlace.innerHTML = firstWord;
+	secondPlace.innerHTML = secondWord;
+	thirdPlace.innerHTML = thirdWord;
+
+	var Nscore = localStorage.getItem("score");;
+
+	if(firstWord == "Harriet") {
+		Nscore++
+	}
+	if(secondWord == "Eliza") {
+		Nscore++
+	}
+	if(thirdWord == "Lizzie") {
+		Nscore++
+	}
+	add(Nscore);
+	var scoretext = document.getElementById("score1")
+	scoretext.innerHTML = score;
+	if(Nscore==4){
+		Swal.fire(
+			"Good Job",
+			"Your score is " + Nscore,
+
+
+		).then(function() {
+		window.location = "dred_scott_case.html";
+		});}
+		else{
+			Swal.fire(
+				"Work a bit harder",
+				"Your score is "+ Nscore,
+			).then(function() {
+		window.location = "dred_scott_case.html";
+		});
+		}
+}
+</script>
+<h1>Quick Quiz!!!!!</h1>
+<h2>Fill in the blanks about Dred Scott's family!</h2>
+<h4>P.S.-spelling counts!!!</h4>
+First Name : <input type="text" id="word1"><br>
+Second Name: <input type= "text" id= "word2"><br>
+Third Name: <input type= "text" id= "word3"><br>
+<button onclick="addWords()">Add</button>
+<p>
+	Dred Scott had wife and two kids. His wife's first name was <b id="place1">__________</b>. His older daughter's name was <b id= "place2">__________</b>.
+	The younger girl's name was <b id="place3">__________</b>.
+</p>
+
+<p>
+	score: <b id="score1">___</b>
+</p>
+</div>
+</body>
+</html>
+
+
+
+
+
+

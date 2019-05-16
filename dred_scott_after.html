@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<link rel="stylesheet" href="stylesheet/stlyesheet.css">
+<meta charset="utf-8">
+<title>Dred Scott Case</title>
+<script src="dredscott.js"></script>
+	<script src="http://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</head>
+<body>
+		<div class = "center">
+<p>After the court case, Dred Scott was returned to Irene Emerson. She felt that keeping them would be to risky, and returned them to the Blow family.  Peter Blows children granted Dred Scott freedom and he finally got to be free. He and his family moved to St. Louis Missouri. Dred Scott got a job as a porter in a hotel and was happy for a little. Then, Dred Scott got tuberculosis and died on September 17, 1858. He was buried in St. Louis, in Calvary Cemetery. After Dred Scott died, the Civil War happened. Then the 14th amendment was added to the Constitution. This said that all people born in the U.S. were citizens. The 14th amendment undid the Dred Scott case, which said slaves were not citizens, even former slaves.Dred Scott was remembered as, “ a simple man who wanted to be free.” In 1997, Dred and Harriet Scott were let into the St. Louis walk of fame. He wanted to be free and got it after a long struggle, just not in the way he planned. 
+</p>
+
+
+<h1>Last Test!!!</h1>
+<h2>Enter these facts</h2>
+
+<script>
+		function addWords(){
+			var firstWord = document.getElementById("word1").value;
+			var secondWord = document.getElementById("word2").value;
+			var thirdWord = document.getElementById("word3").value;
+			
+			var firstPlace = document.getElementById("place1")
+			var secondPlace = document.getElementById("place2")
+			var thirdPlace = document.getElementById("place3")
+			
+			firstPlace.innerHTML = firstWord;
+			secondPlace.innerHTML = secondWord;
+			thirdPlace.innerHTML = thirdWord;
+		
+			var Nscore = localStorage.getItem("score");
+		
+			if(firstWord == "porter") {
+				Nscore++
+			}
+			if(secondWord == "tuberculosis") {
+				Nscore++
+			}
+			if(thirdWord == "14") {
+				Nscore++
+			}
+			add(Nscore);
+			var scoretext = document.getElementById("score1")
+			scoretext.innerHTML = score;
+			if(Nscore==10){
+				Swal.fire(
+					'Good Job ',
+					'Your score is ' + Nscore,
+		
+		
+				).then(function() { 
+				window.location = "end.html";
+				});}
+				else{
+					Swal.fire(
+						'Work a bit harder',
+						'Your score is '+ Nscore,
+					).then(function() { 
+				window.location = "end.html";
+				});
+				}
+		}
+		</script>
+
+<h4>P.S.-spelling counts!!!</h4>
+First Fact: <input type="text" id="word1"><br>
+Second Fact: <input type= "text" id= "word2"><br>
+Third Fact: <input type= "text" id= "word3"><br>
+<button onclick="addWords()">Add</button>
+<p>
+	Dred Scott got a job as a <b id="place1">__________</b> before his death because of <b id= "place2">_____________</b>. The  <b id="place3">__th amendment undid the Dred Scott decision.</b>.
+</p>
+
+<p>
+	score: <b id="score1">___</b>
+</p>
+
+</div>
+</body>
+</html>

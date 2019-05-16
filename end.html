@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<link rel="stylesheet" href="stylesheet/stlyesheet.css">
+<meta charset="utf-8">
+<title>END</title>
+<script src="dredscott.js"></script>
+	<script src="http://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</head>
+<body>
+		<div class = "center">
+
+
+                <script>
+                        function addWords(){
+                       var Nscore= localStorage.getItem("score");
+                                Swal.fire(
+                                    'Good Job ',
+                                    'Your score is ' + Nscore,
+                        
+                        
+                                ).then(function() { 
+                                window.location = "index.html";
+                                });
+                               
+                                }
+                        
+                        </script>
+                
+                        <p>
+                            I would like to thank my parents, my sister, my teacher,and my coding instructor Jose.
+                        </p>
+
+              
+                <button onclick="addWords()">Done</button>
+              
+</body>
+</html>

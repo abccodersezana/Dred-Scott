@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<link rel="stylesheet" href="stylesheet/stlyesheet.css">
+<meta charset="utf-8">
+<title>Dred Scott Case</title>
+<script src="dredscott.js"></script>
+	<script src="http://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</head>
+<body>
+		<div class = "center">
+<p>In 1846, Dred Scott first sued for his freedom. He believed that since he had gone into free states/territories with John Emerson, he should have been free and remain free when he went back to Missouri. The local court agreed with Dred Scott and said he and his family were free. Irene Emerson didn’t like this verdict and brought the case to a higher level of court. The case took 11 years to be given to the Supreme Court. The case happened March 6th, 1857. The main judge for this decision was Roger B. Taney. Dred Scott’s attorneys were Montgomery Blair and George Curtis. Soon, the verdict came out. <br> Dred Scott was proved still a slave. Seven of the nine judges were voting against Dred Scott. This decision proved that slaves could be brought into free places and still be slaves. It also ruled that that African Americans could never be citizens, even if they were born in America. It also undid the Missouri Compromise(which was passed in 1820) which said that all territories west of Missouri and north of the latitude 36, 30 were free. The decision angered many people in the north, because they were scared slavery would spread all across the United States. Southerners were happy because they could bring their slaves wherever they wanted.  This decision helped start the Civil war and made the North and the South more angry with each other. </p>
+
+
+<h1>Historic Dates</h1>
+<h2>Enter the Date of the Dred Scott Case!</h2>
+
+<script>
+		function addWords(){
+			var firstWord = document.getElementById("word1").value;
+			var secondWord = document.getElementById("word2").value;
+			var thirdWord = document.getElementById("word3").value;
+			
+			var firstPlace = document.getElementById("place1")
+			var secondPlace = document.getElementById("place2")
+			var thirdPlace = document.getElementById("place3")
+			
+			firstPlace.innerHTML = firstWord;
+			secondPlace.innerHTML = secondWord;
+			thirdPlace.innerHTML = thirdWord;
+		
+			var Nscore = localStorage.getItem("score");
+		
+			if(firstWord == "1857") {
+				Nscore++
+			}
+			if(secondWord == "6") {
+				Nscore++
+			}
+			if(thirdWord == "March") {
+				Nscore++
+			}
+			add(Nscore);
+			var scoretext = document.getElementById("score1")
+			scoretext.innerHTML = score;
+			if(Nscore==7){
+				Swal.fire(
+					'Good Job ',
+					'Your score is ' + Nscore,
+		
+		
+				).then(function() { 
+				window.location = "dred_scott_after.html";
+				});}
+				else{
+					Swal.fire(
+						"Work a bit harder",
+						"Your score is "+ Nscore,
+					).then(function() { 
+				window.location = "dred_scott_after.html";
+				});
+				}
+		}
+		</script>
+
+<h4>P.S.-spelling counts!!!</h4>
+First Date : <input type="text" id="word1"><br>
+Second Date: <input type= "text" id= "word2"><br>
+Third Date: <input type= "text" id= "word3"><br>
+<button onclick="addWords()">Add</button>
+<p>
+	The year that Dred Scott's court case happened was <b id="place1">__________</b>. It happened the <b id= "place2">___</b>th of <b id="place3">_______</b>.
+</p>
+
+<p>
+	score: <b id="score1">___</b>
+</p>
+
+</div>
+</body>
+</html>

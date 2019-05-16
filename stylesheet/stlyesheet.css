@@ -1,0 +1,14 @@
+.center {
+    margin:auto;
+    width: 60%;
+    height:auto;
+    border:  6px solid #D1E8E2;
+    padding: 10px;
+    background-color: #116466;
+    color: #FFCB9A;
+}
+
+body{
+    background-color: #2C3531;
+}
+
